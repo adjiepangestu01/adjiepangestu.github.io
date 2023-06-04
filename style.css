@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+:root {
+  --primaryColor: #101820;
+  --secondColor: #009bf9;
+  --textColor: #f2faff;
+  --gray: rgba(42, 53, 62, 0.4);
+  --gradient1: linear-gradient(108.7deg, rgba(221, 22, 224, 1) 11%, rgba(111, 22, 190, 1) 88.2%);
+  --gradient2: linear-gradient(109.6deg, rgba(247, 253, 166, 1) 11.2%, rgba(128, 255, 221, 1) 57.8%, rgba(255, 128, 249, 1) 85.9%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  border: none;
+  list-style: none;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+  background: var(--primaryColor);
+  color: var(--textColor);
+}
+#mainNavbar {
+  background-color: var(--primaryColor) !important;
+  border-bottom: 1px solid var(--gray);
+}
+#mainNavbar .nav-item .nav-link {
+  position: relative;
+  color: var(--textColor);
+}
+#mainNavbar .nav-item .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--secondColor);
+  bottom: -3px;
+  left: 0;
+  transition: ease 0.4s;
+  -webkit-transition: ease 0.4s;
+  -moz-transition: ease 0.4s;
+  -ms-transition: ease 0.4s;
+  -o-transition: ease 0.4s;
+}
+#mainNavbar .nav-item:not(:last-child) .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon::focus {
+  outline: none;
+  box-shadow: none;
+}
+#nama {
+  color: var(--textColor);
+  font-size: 2rem;
+  font-family: Bold;
+}
+section {
+  padding: 15rem 0;
+}
+.section-title {
+  padding-bottom: 4rem;
+  position: relative;
+}
+.sub-title {
+  color: var(--secondColor);
+  font-size: 11px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+/* HERO SECTION */
+#hero {
+  background-image: url(image/bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: cover;
+}
+#hero .social a {
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+#hero .social a:hover {
+  color: var(--textColor);
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+#hero h1 .typer {
+  color: var(--secondColor);
+}
+
+/* abiut section */
+.exp {
+  background-color: var(--gray);
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  box-shadow: 0px 30px 45px rgb(22, 22, 22, 0.15);
+}
+.exp-number {
+  margin-top: 20px;
+  margin-bottom: -3px;
+}
+/* skills section */
+.skill {
+  background: var(--gray);
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+.skill:hover {
+  transform: scale(1.12) rotate(-5deg);
+  -webkit-transform: scale(1.12) rotate(-5deg);
+  -moz-transform: scale(1.12) rotate(-5deg);
+  -ms-transform: scale(1.12) rotate(-5deg);
+  -o-transform: scale(1.12) rotate(-5deg);
+  box-shadow: 0px 10px 25px 10px rgba(9, 132, 206, 40%);
+}
+
+/* service section */
+.service-box {
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+.service-box:hover {
+  background-image: linear-gradient(-45deg, #2763b8 0%, #2232dd 100%);
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  padding: 20px 0;
+}
+
+/* contact section */
+.contact-bg {
+  background-color: var(--secondColor);
+  height: 60vh;
+  padding: 50px;
+}
+
+/* foother section */
+.owner {
+  font-family: "Lilita One", cursive;
+  background-image: var(--gradient1);
+  -webkit-background-clip: text;
+  background-size: 200%;
+  background-clip: text;
+  color: transparent;
+  animation: background-gradient 10s infinite alternate;
+}
+
+@keyframes background-gradient {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+.own1 {
+  font-family: "Lilita One", cursive;
+  background-image: var(--gradient2);
+  -webkit-background-clip: text;
+  background-size: 200%;
+  background-clip: text;
+  color: transparent;
+  animation: background-gradient 5s infinite alternate;
+}
